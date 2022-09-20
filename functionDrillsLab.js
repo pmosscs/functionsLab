@@ -214,7 +214,6 @@ console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
-let appleArr = ['seeds', 'skin'];
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
@@ -384,8 +383,7 @@ console.log(emailCheck('pmoss94@gmail.com'));
 //CODE HERE
 function buyFrogs(gold) {
   //frogs are 3 gold
-  return gold / 3; 
-
+  return Math.floor(gold / 3);
 }
 const totalFrogs = buyFrogs(13);
 console.log(totalFrogs);
@@ -396,6 +394,7 @@ console.log(totalFrogs);
 */
 
 //CODE HERE
+/************* already built in  ******************/
 
 
 ////////////////// PROBLEM 21 ////////////////////
@@ -405,6 +404,16 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+function sampleArr(arr4) {
+  for (let i = 0; i < arr4.length; i++) {
+    if (arr4[i] > arr4[i+1]) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+console.log(sampleArr(sampleArray));
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -429,13 +438,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['rubberduck', 'duck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['sailorduck', 'rubberduck', 'duck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['duck', 'realduck']
