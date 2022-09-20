@@ -133,7 +133,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-console.log('arrow', '************');
+console.log('arrow');
 // console.log('declaration')
 // console.log('expression')
 
@@ -176,9 +176,9 @@ console.log('declaration')
 
 //CODE HERE
 function nameCheck(name) {
-  if (name == 'Steven') {
+  if (name === 'Steven') {
     return 'Hey Steven!';
-  } else if (name == 'Bryan') {
+  } else if (name === 'Bryan') {
     return 'Hey Bryan!';
   } else {
     return `Cool name, ${name}!`
@@ -214,6 +214,7 @@ console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
+let appleArr = ['seeds', 'skin'];
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
@@ -221,9 +222,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-function printAllNames(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+function printAllNames(mango) {
+  for (let i = 0; i < mango.length; i++) {
+    console.log("this is mango", mango[i]);
   }
 }
 printAllNames(namesArr);
@@ -275,6 +276,7 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+
 function bigOrSmall(arr) {
   const answers = [];
   for (let i = 0; i < arr.length; i++) {
@@ -339,6 +341,11 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function sample(str1) {
+  console.log(str1.toUpperCase());
+}
+sample(sampleString);
+
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -351,6 +358,23 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+//CODE HERE
+function emailCheck(email) {
+  //convert to string
+  email = String(email).trim();
+  //trim off whitespace - trim()
+  if (email.includes('@')) {
+    return 'Email Verified';
+  } else {
+    return 'Must provide valid email address';
+  }
+
+  //if statement--
+  //check for @ - return valid
+  //no @, return false statement
+}
+console.log(emailCheck('pmoss94@gmail.com'));
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -358,7 +382,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function buyFrogs(gold) {
+  //frogs are 3 gold
+  return gold / 3; 
 
+}
+const totalFrogs = buyFrogs(13);
+console.log(totalFrogs);
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
